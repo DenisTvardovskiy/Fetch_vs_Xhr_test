@@ -6,7 +6,7 @@ let formData = {
     adultsCount: 0,
     childrenCount: 0
 }
-let URL = `https://ecospace.org.ua:3030/pod/getPods`
+let URL = `https://31.131.24.78:3030/pod/getPods`
 let bod = document.getElementById("content")
 const xhr = new XMLHttpRequest();
 async function getPodsInfo(){
