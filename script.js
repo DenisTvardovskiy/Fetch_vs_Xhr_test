@@ -33,7 +33,7 @@ async function getPodsInfo(){
     xhr.send(json);
     xhr.onload = function (){
         bod.innerHTML=''
-        let result = 'Xhr Data <br>---------------<br>'
+        let result = 'Adress: ${URL}<br>Xhr Data <br>---------------<br>'
         nodeXHR = JSON.parse(xhr.response)
         for( let i =0; i<nodeXHR.pods.length; i++){
             result+=`<li>${nodeXHR.pods[i].title}</li>`
@@ -45,7 +45,7 @@ async function getPodsInfo(){
 
 async function Hello() {
     bod.innerHTML=''
-    let result = 'Fetch Data <br>---------------<br>'
+    let result = 'Adress: ${URL}<br>Fetch Data <br>---------------<br>'
     await getPodsInfo()
     for( let i =0; i<node.pods.length; i++){
         result+=`<li>${node.pods[i].title}</li>`
