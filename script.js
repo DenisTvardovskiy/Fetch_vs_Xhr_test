@@ -22,8 +22,9 @@ async function getPodsInfo(){
     body: JSON.stringify(formData)})
         .then(response => response.json())
         .then(data => node = data );
-
+        console.log(node)
     return node
+    console.log(node)
 }
 
  function getXHR(){
