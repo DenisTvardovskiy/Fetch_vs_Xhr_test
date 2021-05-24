@@ -37,6 +37,7 @@ async function getPodsInfo(){
         let result = 'Adress: ${URL}<br>Xhr Data <br>---------------<br>'
         nodeXHR = JSON.parse(xhr.response)
         for( let i =0; i<nodeXHR.pods.length; i++){
+            
             result+=`<li>${nodeXHR.pods[i].title}</li>`
         }
         bod.innerHTML = result
@@ -49,7 +50,8 @@ async function Hello() {
     let result = 'Adress: ${URL}<br>Fetch Data <br>---------------<br>'
     await getPodsInfo()
     for( let i =0; i<node.pods.length; i++){
-        result+=`<li>${node.pods[i].title}</li>`
+        node.pods.active ? result+=`<li>${node.pods[i].title}</li>` : result += ""
+        
     }
     bod.innerHTML = result
 }
